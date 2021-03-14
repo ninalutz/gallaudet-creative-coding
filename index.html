@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative Coding: Weather, Vision, and Sketching</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">MIT Media Lab x Gallaudet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#page-top">Top</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#session1">Session 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#session2">Session 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#sketch">Sketch Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#code">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#help">Help/Docs</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Creative Coding: Weather, Vision, and Sketching</h1>
+        <p class="lead">Here is code, info, etc for "Creative Coding: Weather, Vision, and Sketching" module of Web Design at Gallaudet University, as taught by Nina Lutz and Prof Max Kazemzadeh, Spring 2021. With assistance from Skylar Kolisko.</p>
+    </div>
+</header>
+
+<section id="about">
+   <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Info</h2>
+            <p>I've been doing creative and/or visual coding + math stuffs since 2015 when I started working with Ira Winder in City Science at the MIT Media Lab. I have primarily done Processing and p5.js. </p>
+            <p>I post (almost) daily sketches made wtih p5.js on <a href = "https://twitter.com/ninasketches">my Twitter</a>.</p>
+            <p>This is some documentation for 2 sessions at Gallaudet that I am teaching as part of Prof Max Kazemzadeh's Web Design course.</p>
+            <p>You can view the Github here and you can email me at nlutz@mit.edu if you have more questions!</p>
+            <p>We will be hosting office hours on 3/24 and 3/31 for these sessions or for any Gallaudet students that want to come by and ask questions about resaerch in HCI, creative coding, or careers in this space. Info is below!</p>
+            <img class = "col-4 pb-4" src="img/3_24OfficeHours.jpg" >
+            <img class = "col-4 pb-4" src="img/3_31OfficeHours.jpg" >
+            <p>3/24 12pm-2pm Zoom ID: 978 3958 3579</p>
+            <p>3/31 6pm-8pm Zoom ID: 945 4745 7131</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="session1" class = "bg-light">
+    <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Session 1: Sketching and Weather</h2>
+            <p></p>
+        </div>
+    </div>
+</section>
+
+
+<section id="session2" class = "">
+    <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Session 2: Video on the Web and in Creative Coding</h2>
+            <p></p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="sketch" class = "bg-light">
+    <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Misc sketch tips</h2>
+            <p>Every p5.js sketch has a <code>setup()</code> and <code>draw()</code> loop. Setup runs once. Draw runs consistently and just keeps looping. If you don't want to have a looping drawing, just leave your <code>draw()</code> loop empty and put all your code in <code>setup()</code></p>
+            <p>In general, once you have that structure, you can kind of do whatever you want. The key things to remember in general are:</p>
+             <ul>
+                In general, don't worry if your code is sloppy or not perfect! It is ok. You really don't need to be a production ready software developer to do creative coding -- that is why we have tools.
+            </ul>
+             <ul>
+                Give credit where credit is due. Often my sketches start as a rift from a few lines of something I see so I usually put on the top of the code file "rift from [source]". This also shows that no one does anything really in a vacuuum or alone!
+            </ul>
+            <ul>
+                p5.js is a Javascript library but has a lot of built in functions so always check their reference!
+            </ul>
+            <ul>
+                p5.js uses a Cartesian, computer graphics coordinate system. By default the UPPER LEFT is 0, 0. x increases to the right, y increases as you go down. This is common across all of computer graphics and there are a lot of math reasons we do this, <a href = "https://scc.ustc.edu.cn/zlsc/sugon/intel/compiler_f/main_for/bldaps_for/win/bldaps_grcoord.htm">read more here</a>.
+                <img src="computer_coordinates.png" >
+            </ul>
+            <ul>
+                RGB is the default color space, but you can <a href = "https://p5js.org/reference/#/p5/color">mess around with it</a> with lots of color functions.
+            </ul>
+             <ul>
+                Remember that p5.js has default alignments for primative shapes like rectangles. Check these if they are throwing off your sketches.
+            </ul>
+            <ul>
+                In general, you are probably going to want either a polar coordinate system or rectangular/Cartesian system for sketches. So think about this in your design. <a href = "https://p5js.org/examples/math-polartocartesian.html">Here's an example converting between</a>. 
+            </ul>
+            <ul>
+                Object oriented programming can be super powerful in p5.js and create beautiful things and particle systems and force fields. <a href = "ex8">Example 8</a> has an example of a Particle object if you haven't written objects in JS before.
+            </ul>
+            <ul>
+                While p5.js does support 3D, in general, OpenGL/WebGL implementations are going to just give you more. p5.js has a 3D mode on top of these, but it's just something to keep in mind. I primarily don't do a lot of 3D things so I have very few tips for this.
+            </ul>
+            <h3>Some of my favorite...functions/hacks</h3>
+             <ul>
+                <code>background(255, 50)</code> this makes a semi transparent background that gives your code a "ghost" appearance. 255 would be a white background like Example 1.
+            </ul>
+            <ul>
+                p5.js has a built in <code>noise() </code> function so you don't have to write matrices to get noise! <a href = "https://p5js.org/reference/#/p5/noise">Reference here.</a>
+            </ul>
+            <ul>
+                I love creating movement with sinusodial functions and also creating weird shapes with <code>tau</code> (2*pi). <a href = "#ex5">Example 5</a> shows an example of tau being used to create weird, noisy curves. <a href = "#ex4">Example 4</a> shows some cool sin/cos curves.
+            </ul>
+            <ul>
+                <code>map(value, start1, stop1, start2, stop2)</code> is a function that allows you to linearly interpolate between value ranges. Used for color + coordinates. <code>lerpColor(startColor, endColor, percent)</code> lets you do this a bit easier for colors.
+            </ul>
+            <ul>
+                <code>createVector()</code> a lot of my sketches are vector based and what's great about creating a vector is you can do vector math like adding forces and velocities. <a href = "https://p5js.org/reference/#/p5/createVector">Reference here.</a> 
+            </ul>
+            <ul>
+                <code>curveVertex()</code> allows you to build more complex geometries overall.<a href ="https://p5js.org/reference/#/p5/curveVertex"> Refence here</a>. <a href = "ex4">Example 4</a> also has an example of this.
+            </ul>
+            <ul>
+                <code>blendMode()</code> is a super easy way to start playing with color and pixel blending without writing any code. Reference for all the modes is <a href = "https://p5js.org/reference/#/p5/blendMode"> here </a>. I personally love using EXCLUSION to get a glitchy look.
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="code">
+    <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Code/Downloads from this module</h2>
+            <p>All of the code of the examples on this site is <a href = "https://github.com/ninalutz/mathcodeartworkshops">in this repo</a>, including a blank p5.js sketch template <a href = "blank_p5_example.zip" download>here</a> </p>
+            <p>I am, in general, trying to get better at documenting things and making more tutorials and tutorial like materials, so feel free to check back on <a href = "https://twitter.com/ninalikespi">my Twitter</a> as I post things.</p>
+        </div>
+    </div>
+</section>
+
+<section id="help"  class = "bg-light">
+    <div class="row mx-2">
+        <div class="col-lg-8 mx-auto">
+            <h2>Resources/Help/Documentation</h2>
+            <p>The <a href = "https://p5js.org">p5.js website</a> really is the best place to get help/documentation. In particular they have a learn page with more code explanations and also a <a href = "https://p5js.org/reference/">documentation/reference page for quick lookups</a> and an <a href = "https://p5js.org/examples/">examples page</a>.</p>
+            <p>There are a lot of amazing people in the space that do tutorials and content for this work and code alongs and have lots of tutorials. <a href ="https://shiffman.net">Daniel Shiffman</a> is a great person to look at for these.</p>
+            <p>There is also just an amazing <a href = "https://p5js.org/community/">community</a> around this space, which I encourage people to look into. There are creative coding clubs and scenes all over the world, and a lot of them are welcoming to everyone and newcomers!</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; <a href = "https://ninalutz.github.io/">Nina Lutz</a> 2020</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+
+</body>
+</html>
