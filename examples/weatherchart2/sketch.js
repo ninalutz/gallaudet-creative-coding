@@ -3,19 +3,15 @@ var boldFont
 
 var chartLeft = 100;
 var chartRight = 590;
-
 var barWidth = 30; 
-
 var chartTop = 50;
 var chartBottom = 375-50;
 
 var daycolor;
-
-var monthLetters = "JFMAMJJASOND";
-
-var data;
 var nightcolor;
 
+var monthLetters = "JFMAMJJASOND";
+var data;
 
 function preload() {
   plainFont = loadFont("data/Roboto-Light.ttf");
@@ -37,12 +33,11 @@ function draw() {
   
   fill(255);
 
-  
   textFont(plainFont, 20);
   textAlign(CENTER);
   text("Daylight and Temperature by Hour", width/2, 50);
-  
-    textFont(boldFont, 14);
+  textFont(boldFont, 14);
+
   // draw the bars
   strokeWeight(barWidth);
   strokeCap(SQUARE);
@@ -51,14 +46,11 @@ function draw() {
     var sunriseY = map(getSunrise(month), 0, 24*60, chartBottom, chartTop);
     var sunsetY = map(getSunset(month), 0, 24*60, chartBottom, chartTop);
     
-
     // first draw a black bar top to bottom
     stroke(nightcolor);
-    //line(chartTop, x, chartBottom, x);
     
     // now draw a gray bar for the daylight hours
     stroke(daycolor);
-    //line(sunriseY, x, sunsetY, x);
     
     // down below, show the first letter of the month
     noStroke();
@@ -66,8 +58,7 @@ function draw() {
     text(monthLetters[month], 30, x+barWidth/2 -2);  
     translate(10, 0);
     for(var hr = 0; hr<24; hr++){
-            stroke(255, 0, 0);
-
+      stroke(255, 0, 0);
       strokeWeight(9);
       
       if(11.7*hr + 53 <= sunriseY){
@@ -77,20 +68,16 @@ function draw() {
       if(11.7*hr + 53 <= sunsetY){
       	stroke(nightcolor);
       }
-      
+
       if(11.7*hr + 53 > sunriseY){
       	stroke(nightcolor);
       }
-		
-      
+
     	line(11.7*hr + 53, x+barWidth/2, 11.7*hr + 53, x-random(0, barWidth/2));
     }
     translate(-10, 0);
-    strokeWeight(barWidth);
-    
+    strokeWeight(barWidth); 
   }
-
-  
 }
 
 

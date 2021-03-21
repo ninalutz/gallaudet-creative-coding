@@ -122,19 +122,10 @@ function requestWeather() {
     }
     
     
-    // you can guess what this does
+    // gets temp in F
     this.getTemperature = function(range) {
       return range ? gatherRange(range, 'temperature') : this.currently.temperature;
     }
-    
-        this.getTemperatureMin = function(range) {
-      return range ? gatherRange(range, 'temperatureMin') : this.currently.temperature;
-    }
-    
-            this.getTemperatureMax = function(range) {
-      return range ? gatherRange(range, 'temperatureMax') : this.currently.temperature;
-    }
-    
     
     
     // what the temperature feels like

@@ -1,6 +1,5 @@
 
 //TODO: Replace these with the location you want using Google maps
-
 var lat = 38.9072;
 var lon = -77.0369;
 
