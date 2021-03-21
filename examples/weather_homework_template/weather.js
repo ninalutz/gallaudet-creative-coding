@@ -122,7 +122,7 @@ function requestWeather() {
     }
     
     
-    // you can guess what this does
+    // temperature in Farenheit
     this.getTemperature = function(range) {
       return range ? gatherRange(range, 'temperature') : this.currently.temperature;
     }
