@@ -16,27 +16,10 @@ function setup() {
   light = color(183, 200, 204);
   horizon = height/3;
 
-  for(var i =0; i< maxDrops; i++){
-    var x = int(random(0, width));
-    var y = -int(random(height*2));
-    var z = horizon+int(random(horizon*2))
-    var d = 1280;
-    drop = new Drop(x, y, z, d);
-    drops.push(drop);
-  }
+  
 }
 
 function draw() {
-  for(var i =0; i<= height; i++){
-    var iVal = map(i, 0, height, 0, 1);
-    var c = lerpColor(light, dark, iVal);
-    stroke(c);
-    line(0, i, width, i);
-  }
-
-  for(var i =0; i<drops.length; i++){
-    drops[i].fall();
-  }
 
 }
 

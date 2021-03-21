@@ -1,46 +1,48 @@
+//Some static global variables
 var dark;
 var light;
-var drops;
 var horizon;
-
-var maxDrops = 600;
-
 var ripplecolor = 130;
 var dropcolor = 170;
+
+var maxDrops = 600;
+var drops = [];
 var rainspeed = 2;
 var ripplegrowth = 7;
 
 function setup() {
   createCanvas(375, 667);
   dark =color(0);
-  light = color(183, 191, 204);
+  light = color(183, 200, 204);
   horizon = height/3;
 
-  //populate an array of drops
-  drops = [];
-  for(var i = 0; i< maxDrops; i++){
-    var horizonVal = horizon+int(random(horizon*2));
-    d = new Drop(int(random(width)),-int(random(height*2)), horizonVal, 1280);
-    drops.push(d);
+  for(var i =0; i< maxDrops; i++){
+    var x = int(random(0, width));
+    var y = -int(random(height*2));
+    var z = horizon+int(random(horizon*2))
+    var d = 1280;
+    drop = new Drop(x, y, z, d);
+    drops.push(drop);
   }
 }
 
-
 function draw() {
-  for (var i = 0; i <= height; i++) {
-    var inter = map(i, 0, height, 0, 1);
-    var c = lerpColor(light, dark, inter);
+  for(var i =0; i<= height; i++){
+    var iVal = map(i, 0, height, 0, 1);
+    var c = lerpColor(light, dark, iVal);
     stroke(c);
     line(0, i, width, i);
   }
-  
-  for(var i = 0; i<drops.length; i++){
+
+  for(var i =0; i<drops.length; i++){
     drops[i].fall();
   }
 
 }
 
+//Our drop object
 
+//This constructor has all the information about our raindrops
 var Drop = function(x, y, z, d){
   this.x = x;
   this.y = y;
@@ -52,6 +54,7 @@ var Drop = function(x, y, z, d){
   this.ripple = 0;
 }
 
+//This is a function we can call for each drop to draw it falling
 Drop.prototype.fall = function(){
   if(this.y > 0){
     this.acel+=0.25;
