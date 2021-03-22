@@ -1,8 +1,9 @@
 
 //TODO: Replace these with the location you want using Google maps
-var lat = 38.9072;
-var lon = -77.0369;
 
+var lat = 47.60646;
+var lon = -70;
+var API_Key = '60dc5573268814d54e2f5354832b75a6';
 //location for our weather sphere
 var locY;
 var locX;
@@ -11,7 +12,7 @@ var direction = 1;
 function setup() {
   createCanvas(375, 667);
   //First the weather is loaded through the API from a GET request 
-  w = requestWeather(lat, lon, '60dc5573268814d54e2f5354832b75a6');
+  w = requestWeather(lat, lon, API_Key);
 
   textSize(16);
   textAlign(CENTER);
@@ -37,9 +38,18 @@ function drawWeather(){
   //We can then make a get statement on our weather class from the API 
 	var temp = w.getTemperature();
 
+  var col1 = color(255);
+  var col2 = color(0);
+  var cloud_cover = w.getCloudCover();
+  var c = lerpColor(col1, col2, cloud_cover);
+  fill(c);
+
   //We can make an ellipse with the temperature size 
 	ellipse(locX, locY, temp*2, temp*2);
-	text(temp, locX, locY + 4);
+
+  fill(255, 0, 0);
+	text(w.getCloudCover(), locX, locY + 4);
+
   
   //We can make the windspeed the velocity of the circle 
   var windspeed = w.getWindSpeed();
